@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Product Management Dashboard</title>
+  <link rel="stylesheet" type="text/css" href="/static/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap" rel="stylesheet">
+</head>
+<body>
+     <nav>
+        <div class="logo">Made2Automate</div>
+        <div class="scanner">barcodeScanner</div>
+     </nav>
+  <div class="dashboard">
+       
+        <div class="section">
+            <div class="order" style="color:blue;" id="totalOrders">112<br><br>Total order</div>
+            <div class="order" style="color: rgb(231, 111, 111);" id="totalStock">152<br><br>New Stocks</div>
+            <div class="order" style="color: rgb(137, 215, 137);" id="soldStock">100<br><br>Dead Stocks</div>
+            <div class="order" style="color: black;" id="totalLeads">25<br><br>Total leads</div>
+            <div class="order" style="color: grey;" id="totalrevenue">1,11,200<br><br>Total Revenue</div>
+        </div>
+        <div class="section2">
+          <button class="btn1">View All</button>
+            <h3>Total orders</h3>
+            A summary of your orders
+            <div class="sec21">
+             <h3> <b>IR Sensor</b></h3>
+              Product description here this one is really long and it goes over may be<br>
+              Quantity: 120 pieces
+            </div>
+            <div class="sec22">
+              <h3> <b>Metal Sensor</b></h3>
+               Task description here this one is really long and it goes over may be? and goes to two lines<br>
+               Quantity: 140 pieces
+             </div>
+             
+        </div>
+        <div class="section3">
+          <button class="btn1">View All</button>
+            <h3>Total orders</h3>
+            A summary of your leads received
+            <div class="sec22">
+              <h3> <b>Rakesh Verma</b></h3>
+               I need Metal sensor.it is available now?Please contact me<br>
+               Quantity: 120 pieces
+               <a class="add" href="/product">Add Product</a>
+             </div>
+        </div>
+  </div>
+
+  <script>
+    // Simulated data - replace this with actual data retrieval logic
+    function simulateDataUpdate() {
+      const totalStock = Math.floor(Math.random() * 1000);
+      const soldStock = Math.floor(Math.random() * totalStock);
+      const totalOrders = Math.floor(Math.random() * 500);
+      const totalLeads = Math.floor(Math.random() * 200);
+      const totalrevenue= Math.floor(Math.random()*150000)
+
+      document.getElementById('totalStock').innerText = ` ${totalStock} units
+      
+      total stock`;
+      document.getElementById('soldStock').innerText = ` ${soldStock} units
+      
+      Dead Stock`;
+      document.getElementById('totalOrders').innerText = ` ${totalOrders} 
+      
+      Total Order`;
+      document.getElementById('totalLeads').innerText = ` ${totalLeads}
+      
+      Total Leads`;
+      document.getElementById('totalrevenue').innerText= `${totalrevenue}
+      
+      Total Revenue`
+    }
+
+    
+
+    // Simulating real-time updates every 3 seconds
+    setInterval(simulateDataUpdate, 3000);
+    simulateDataUpdate(); // Initial data update
+   </script> 
+</body>
+</html>

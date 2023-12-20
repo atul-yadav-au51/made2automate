@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Adda Product</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <nav>
+        <div> <a href="/" class="logo">Made2Automate </a></div>
+        <div class="scanner"></div>
+     </nav>
+   <div class="form">
+    <form>
+        <a class="img"><input type="file"><br>Upload Image</a><br><br>
+
+        <input class="input" type="text" placeholder="Add product name here"><br><br>
+        <input class="input" type="text" placeholder="Product ID"><br><br>
+        <input class="input" type="text" placeholder=" Manufacturer Name"><br><br>
+        <input class="input" type="text" placeholder=" Product Description"><br><br>
+        <input class="input" type="text" placeholder=" Produc quantity"><br><br>
+        <b>Select Category</b>
+        <select>
+            <option value="new stock">New Stock</option>
+        <option value="new order">New order</option>
+        <option value="dead stock">Dead Stock</option>
+        <option value="leads">Leads</option><br>
+        </select>
+        
+    </form>
+    <button class="can">Cancel</button>
+    <button onclick="save()" class="btn1">Save changes</button>
+   </div>
+   <script>
+    function save(){
+        alert("Products Added succesfully")
+    }
+    form.reset
+   </script>
+</body>
+</html>
